@@ -12,8 +12,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mainImageView: UIImageView!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        MusicPlayer.shared.startBackgroundMusic()
+        
+//        getImage()
         
         print("Begin of code")
         let url = URL(string: "https://upload.wikimedia.org/wikipedia/commons/d/db/Background_Clouds_2_%2855079272%29.jpeg")!
@@ -23,11 +29,18 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: UIButton) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
-            return
+        
+        DispatchQueue.main.async {
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
+                return
+            }
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: false, completion: {() in print("화면전환 완료")})
         }
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        
+        MusicPlayer.shared.gamePlaydMusic()
+
+
     }
     
 //    func getImage() {
@@ -52,8 +65,8 @@ class MainViewController: UIViewController {
             guard let data = data, error == nil else { return }
             print(response?.suggestedFilename ?? url.lastPathComponent)
             print("Download Finished")
-            DispatchQueue.main.async() { [weak self] in
-                self?.mainImageView.image = UIImage(data: data)
+            DispatchQueue.main.async() {
+                [weak self] in self?.mainImageView.image = UIImage(data: data)
             }
         }
     }

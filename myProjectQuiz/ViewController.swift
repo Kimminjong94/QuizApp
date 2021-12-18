@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         update()
-        
         fetchImage({ (data) in
             print(data)
         })
@@ -81,7 +80,6 @@ class ViewController: UIViewController {
     }
     
     private func fetchImage(_ completion: @escaping (Result<(Data, URLResponse), Error>) -> Void) {
-
         let getDataTask = URLSession.shared.dataTask(with: URL(string: urlString)!) {data, response, error in
             if let error = error {
               completion(.failure(error))
@@ -95,5 +93,10 @@ class ViewController: UIViewController {
         }
         getDataTask.resume()
     }
+    
+    
+//    private func imageFetch(_ completion: @escaping (Result<(Data, URLResponse), Error>) -> Void) {
+//
+//    }
 }
 

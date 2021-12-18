@@ -15,6 +15,9 @@
 		58808E40276B210D004F2490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58808E3F276B210D004F2490 /* Assets.xcassets */; };
 		58808E43276B210D004F2490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58808E41276B210D004F2490 /* LaunchScreen.storyboard */; };
 		58808E4B276B27A6004F2490 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58808E4A276B27A6004F2490 /* Question.swift */; };
+		5894D8E3276DBACF00147BF0 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5894D8E2276DBACF00147BF0 /* MusicPlayer.swift */; };
+		5894D8E6276DC92C00147BF0 /* backmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5894D8E5276DC92C00147BF0 /* backmusic.mp3 */; };
+		5894D8E8276DCAC100147BF0 /* Gamemusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5894D8E7276DCAC100147BF0 /* Gamemusic.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		58808E42276B210D004F2490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58808E44276B210D004F2490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58808E4A276B27A6004F2490 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5894D8E2276DBACF00147BF0 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		5894D8E5276DC92C00147BF0 /* backmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backmusic.mp3; sourceTree = "<group>"; };
+		5894D8E7276DCAC100147BF0 /* Gamemusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Gamemusic.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +70,24 @@
 				58808E38276B210C004F2490 /* SceneDelegate.swift */,
 				584C8CEB276B62820074FE2E /* MainViewController.swift */,
 				58808E3A276B210C004F2490 /* ViewController.swift */,
+				5894D8E2276DBACF00147BF0 /* MusicPlayer.swift */,
 				58808E4A276B27A6004F2490 /* Question.swift */,
 				58808E3C276B210C004F2490 /* Main.storyboard */,
+				5894D8E9276DCAC700147BF0 /* MusicAssets */,
 				58808E3F276B210D004F2490 /* Assets.xcassets */,
 				58808E41276B210D004F2490 /* LaunchScreen.storyboard */,
 				58808E44276B210D004F2490 /* Info.plist */,
 			);
 			path = myProjectQuiz;
+			sourceTree = "<group>";
+		};
+		5894D8E9276DCAC700147BF0 /* MusicAssets */ = {
+			isa = PBXGroup;
+			children = (
+				5894D8E5276DC92C00147BF0 /* backmusic.mp3 */,
+				5894D8E7276DCAC100147BF0 /* Gamemusic.mp3 */,
+			);
+			path = MusicAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				58808E43276B210D004F2490 /* LaunchScreen.storyboard in Resources */,
+				5894D8E8276DCAC100147BF0 /* Gamemusic.mp3 in Resources */,
+				5894D8E6276DC92C00147BF0 /* backmusic.mp3 in Resources */,
 				58808E40276B210D004F2490 /* Assets.xcassets in Resources */,
 				58808E3E276B210C004F2490 /* Main.storyboard in Resources */,
 			);
@@ -146,6 +165,7 @@
 			files = (
 				58808E3B276B210C004F2490 /* ViewController.swift in Sources */,
 				58808E4B276B27A6004F2490 /* Question.swift in Sources */,
+				5894D8E3276DBACF00147BF0 /* MusicPlayer.swift in Sources */,
 				58808E37276B210C004F2490 /* AppDelegate.swift in Sources */,
 				58808E39276B210C004F2490 /* SceneDelegate.swift in Sources */,
 				584C8CEC276B62820074FE2E /* MainViewController.swift in Sources */,
