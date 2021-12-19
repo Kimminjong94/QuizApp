@@ -1,9 +1,3 @@
-//
-//  MusicPlayer.swift
-//  myProjectQuiz
-//
-//  Created by 김민종 on 2021/12/18.
-//
 
 import Foundation
 import AVFoundation

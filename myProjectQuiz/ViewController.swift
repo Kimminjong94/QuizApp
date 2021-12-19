@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  myProjectQuiz
-//
-//  Created by 김민종 on 2021/12/16.
-//
+
 
 import UIKit
 
@@ -16,8 +11,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var backGroundLabel: UIImageView!
     
     let urlString = "https://upload.wikimedia.org/wikipedia/commons/d/db/Background_Clouds_2_%2855079272%29.jpeg"
-
-    
     let quiz = [
         Question(q: "4+4 = 8", a: "True"),
         Question(q: "2+2 = 4", a: "True"),
@@ -45,14 +38,12 @@ class ViewController: UIViewController {
         
         let userAnswer = sender.currentTitle
         let actualAnswer = quiz[quetionNumber].answer
-        
         if userAnswer == actualAnswer {
             sender.backgroundColor = UIColor.green
             score += 1
         } else {
-            sender.backgroundColor = UIColor.red
+            sender.backgroundColor   = UIColor.red
         }
-        
         if quetionNumber + 1 < quiz.count {
             quetionNumber += 1
         } else {
@@ -93,10 +84,5 @@ class ViewController: UIViewController {
         }
         getDataTask.resume()
     }
-    
-    
-//    private func imageFetch(_ completion: @escaping (Result<(Data, URLResponse), Error>) -> Void) {
-//
-//    }
 }
 
